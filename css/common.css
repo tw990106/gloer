@@ -6,13 +6,72 @@
 }
 
 /* 폰트 */
+html{
+    font-family: "Noto Sans KR", system-ui;
+}
 .caprasimo{
-    font-family: 'Caprasimo';
+    font-family: "Caprasimo", system-ui;
+}
+.eb-garamond{
+    font-family: "EB Garamond", system-ui;
 }
 
 
-/* 헤더 */
 
+/* 헤더 */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+header h1 a{
+    display: block;
+    text-indent: -99999px;
+    background: url('/images/gloer-logo.png') no-repeat;
+    background-size: contain;
+    width: 162px;
+    height: 49px;
+}
+header nav > ul{
+    display: flex;
+    justify-content: space-between;
+    
+}
+header nav > ul > li{
+    padding: 0 35px;
+}
+header nav > ul li:last-of-type{
+    position: relative;
+}
+header nav > ul > li > a{
+    font-weight: 500;
+}
+header nav > ul > li > a:hover{
+    color: #FF621E;
+}
+.gnb{
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: #FF621E;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    text-align: center;
+}
+.gnb li:not(:last-of-type){
+    margin-bottom: 25px;
+}
+.gnb li a{
+    color: #fff;
+}
+.h-icon{
+    display: flex;
+}
 
 
 /* 푸터 */
