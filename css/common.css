@@ -4,6 +4,13 @@
     width: 1700px;
     margin: 0 auto;
 }
+.menu-wrap{
+    width: 1300px;
+    margin: 0 auto;
+}
+header + *{
+    padding-top: 89px;
+}
 
 /* 폰트 */
 html{
@@ -14,16 +21,26 @@ html{
 }
 .eb-garamond{
     font-family: "EB Garamond", system-ui;
+    font-style: italic;
+    font-weight: 500;
 }
 
 
 
 /* 헤더 */
 header{
+    z-index: 999;
+    background-color: #fff;
+    position: fixed;
+    padding: 20px 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+.h-inner{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    
 }
 header h1 a{
     display: block;
@@ -72,6 +89,77 @@ header nav > ul > li > a:hover{
 .h-icon{
     display: flex;
 }
+.h-icon li{
+    margin-left: 20px;
+}
+.h-icon li i{
+    font-size: 24px;
+    color: #333;
+}
+.h-icon li i:hover{
+    color: #FF621E;
+}
 
 
 /* 푸터 */
+footer{
+    background-color: #FFF6C3;
+    padding: 60px 0;
+}
+.f-top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.fnb{
+    display: flex;
+}
+.fnb li:not(:first-of-type){
+    margin-left: 40px;
+}
+.fnb li a{
+    font-weight: 500;
+}
+.fnb li a:hover{
+    color: #FF621E;
+}
+.f-icon{
+    display: flex;
+}
+.f-icon li{
+    margin-left: 20px;
+}
+.f-icon li i{
+    font-size: 24px;
+    color: #333;
+}
+.f-icon li i:hover{
+    color: #FF621E;
+}
+.f-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.b-left > div:not(:last-of-type){
+    margin-bottom: 20px;
+}
+.b-left > div *{
+    display: inline-block;
+    color: #555;
+}
+.b-left > div > *:not(:first-child){
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: 1px solid #555;
+}
+.f-bottom h1{
+    align-self: flex-end;
+}
+.f-bottom h1 a{
+    display: block;
+    text-indent: -9999px;
+    background: url('/images/gloer-logo.png') no-repeat;
+    background-size: contain;
+    width: 160px;
+    height: 50px;
+}

@@ -1,0 +1,550 @@
+/* 메인페이지 */
+/* 메인영역 */
+.main-sec{
+    margin-bottom: 200px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main-txt{
+    /* width: 100%; */
+    font-size: 9rem;
+    color: #FF621E;
+    opacity: .8;
+    z-index: 2;
+}
+.main-txt > div{
+    text-align: center;
+}
+.main-txt > div:not(:last-of-type){
+    margin-bottom: 100px;
+}
+.main-sec img{
+    display: block;
+    position: absolute;
+    width: 25%;
+}
+.main-sec a:first-of-type img{
+    left: 10%;
+    top: 6%;
+    animation: action2 3s ease infinite;
+}
+.main-sec a:last-of-type img{
+    right: 10%;
+    bottom: -2%;
+    animation: action 3s ease infinite;
+}
+/* 이미지 애니메이션 */
+@keyframes action{
+    0%{
+        transform: translateY(0px);
+    }50%{
+        transform: translateY(30px);
+    }100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes action2{
+    0%{
+        transform: translateY(30px);
+    }50%{
+        transform: translateY(0px);
+    }100%{
+        transform: translateY(30px);
+    }
+}
+
+/* 메인 - 메뉴영역 */
+.main-title{
+    text-align: center;
+    color: #FF621E;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+.menu-sec{
+    text-align: center;
+    margin-bottom: 150px;
+}
+.menu-sec > p{
+    margin-bottom: 40px;
+}
+.menu-sec > a{
+    margin-bottom: 50px;
+}
+
+/* common elements - more btn */
+.more-btn{
+    position: relative;
+    display: inline-block;
+    font-size: 1.2rem;
+}
+.more-btn:before{
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: -2px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background-color: #FF621E;
+    opacity: .5;
+    z-index: -1;
+}
+.more-btn:after{
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: -36px;
+    width: 22px;
+    height: 5px;
+    background: url(/images/more-btn.png) no-repeat;
+    background-size: contain;
+}
+
+.main-menu{
+    display: flex;
+    justify-content: space-between;
+
+}
+.main-menu li{
+    width: 23%;
+    background-color: #FFF8F0;
+    border-radius: 5%;
+    padding: 40px 0;
+}
+.main-menu li img{
+    width: 80%;
+    display: block;
+    transition: transform .2s;
+    margin: 0 auto 30px;
+}
+.main-menu li img:hover{
+    transform: scale(1.1);
+}
+.brand-sec{
+    display: flex;
+    justify-content: space-between;
+    /* overflow: hidden; */
+    margin-bottom: 150px;
+    height: 65vh;
+}
+.brand-txt{
+    text-align: left;
+    width: 35%;
+    align-self: center;
+}
+.brand-txt h2{
+    text-align: left;
+}
+.brand-txt p{
+    margin-bottom: 30px;
+    line-height: 1.4rem;
+}
+.brand-img{
+    position: relative;
+    width: 50%;
+}
+.brand-img img{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.sns-sec{
+    margin-bottom: 200px;
+}
+.menu-tab{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.menu-tab li{
+    margin: 0 20px;
+}
+.menu-tab .tab-btn{
+    border: none;
+    background-color: transparent;
+    color: #777;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.menu-tab .tab-btn.active{
+    color: #000;
+    position: relative;
+}
+.menu-tab .tab-btn.active:before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background-color: #FF621E;
+    opacity: .5;
+    z-index: -1;
+    transform: translateX(-50%);
+}
+.tab-panel{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+/* 브랜드 페이지 */
+.brandSec{
+    overflow: hidden;
+}
+.sub-title{
+    margin: 200px 0;
+    text-align: center;
+    font-size: 4.4rem;
+    color: #FF621E;
+    position: relative;
+}
+.sub-title:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('/images/sub-title-bg.png') no-repeat;
+    width: 220px;
+    height: 220px;
+    z-index: -1;
+}
+.brand-title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.brand-title > span{
+    font-size: 3.2rem;
+    font-weight: 800;
+    opacity: .2;
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    left: 1.2%;
+    z-index: -2;
+}
+.brand-title > h3{
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.brand-title > h3 > span{
+    color: #FF621E;
+}
+.about-1{
+    margin-bottom: 150px;
+}
+.about-1 > p{
+    text-align: center;
+    width: 60%;
+    margin: 0 auto 100px;
+    line-height: 1.4rem;
+}
+.about-1 > ul{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.about-1 > ul li img{
+    display: block;
+    margin-bottom: 30px;
+}
+.about-2{
+    display: flex;
+    margin-bottom: 150px;
+}
+.about-2 > *{
+    width: 48%;
+}
+.about-2 > img{
+    display: block;
+    border-radius: 3%;
+}
+.about-2-txt{
+    margin-left: 4%;
+    align-self: center;
+}
+.about-2-txt > .brand-title{
+    text-align: left;
+    align-self: center;
+}
+.about-2-txt > p{
+    line-height: 1.4rem;
+    width: 83%;
+}
+.about-3{
+    margin-bottom: 200px;
+}
+.about-3 > p{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.about-3 > img{
+    display: block;
+    margin: 0 auto 80px;
+}
+.about-3 iframe{
+    display: block;
+    margin: 0 auto;
+}
+
+/* 메뉴 페이지 */
+.menuSec > p{
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 1.6rem;
+}
+
+/* 메뉴 페이지 - 전체메뉴 공통 리스트*/
+.menu-list{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+.menu-list li{
+    width: 30%;
+    background-color: #FFF8F0;
+    border-radius: 100%;
+    margin-bottom: 50px;
+    overflow: hidden;
+    position: relative;
+}
+.menu-list li > *{
+    text-align: center;
+}
+.menu-list li > a > div{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 13%;
+    box-sizing: border-box;
+}
+.menu-list li > a > div:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 98, 30, .4);
+    opacity: 0;
+    transition: all .4s;
+    z-index: 1;
+}
+.menu-list li:hover > a > div:before{
+    opacity: 1;
+}
+.menu-list li img{
+    display: block;
+    width: 100%;
+}
+.caption{
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    border-radius: 100%;
+    color: #fff;
+    font-size: 1.2rem;
+    z-index: 2;
+}
+.menu-list li:hover .caption{
+    opacity: 1;
+}
+.caption p{
+    margin-bottom: 10px;
+}
+.caption span{
+    display: block;
+}
+
+
+/* 프랜차이즈 */
+/* 프랜차이즈 - 창업경쟁력 */
+#pc-competition{
+    text-align: center;
+}
+#pc-competition > p{
+    margin-bottom: 20px;
+}
+#pc-competition > p:last-of-type{
+    margin-bottom: 100px;
+}
+#pc-competition > ul{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 100px;
+}
+#pc-competition > ul li{
+    width: 350px;
+    height: 350px;
+    background-color: #FFF8F0;
+    box-sizing: border-box;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#pc-competition > ul li h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #FF621E;
+}
+#pc-competition > ul li:first-of-type h4{
+    margin-bottom: 30px;
+}
+#pc-competition > ul li p{
+    margin-bottom: 10px;
+}
+#pc-competition h3{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #FF621E;
+    margin-bottom: 30px;
+}
+#pc-competition .review{
+    margin-bottom: 100px;
+}
+#pc-competition .review p{
+    line-height: 1.6rem;
+}
+#pc-competition .review p:last-of-type{
+    margin-bottom: 50px;
+}
+#pc-competition .marketing p{
+    margin-bottom: 50px;
+}
+#pc-competition .marketing img{
+    display: inline-block;
+    border-radius: 3%;
+}
+#pc-competition .marketing img:not(:first-of-type){
+    margin-left: 2%;
+}
+
+/* 프랜차이즈 - 창업절차 */
+#pc-procedure{
+    text-align: center;
+}
+#pc-procedure > p{
+    margin-bottom: 50px;
+}
+#pc-procedure ul{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    width: 1540px;
+    margin: 0 auto;
+}
+#pc-procedure ul li{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 308px;
+    height: 308px;
+    box-sizing: border-box;    
+    margin-bottom: 50px;
+    border-radius: 100%;
+}
+#pc-procedure ul li:not(:nth-of-type(4n+1)){
+    margin-left: 5%;
+}
+#pc-procedure ul li:nth-of-type(2n+1){
+    background-color: #FFF8F0;
+    color: #000;
+}
+#pc-procedure ul li:nth-of-type(2n+2){
+    background-color: #FFB18F;
+    color: #fff;
+}
+#pc-procedure ul li .number{
+    position: absolute;
+    top: 5%;
+    left: 8%;
+    font-size: 3.8rem;
+    font-style: italic;
+    font-weight: 600;
+}
+#pc-procedure ul li:nth-of-type(2n+2) .number{
+    color: #FFF8F0;
+}
+#pc-procedure ul li:nth-of-type(2n+1) .number{
+    color: #FFB18F;
+}
+#pc-procedure ul li:nth-of-type(13){
+    width: 100%;
+    border-radius: 30px;
+    padding: 0;
+}
+#pc-procedure ul li h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+#pc-procedure ul li p{
+    margin-top: 20px;
+}
+
+/* 프랜차이즈 - 창업비용 */
+#pc-price > p{
+    margin-bottom: 30px;
+}
+#pc-price .price-table{
+    width: 100%;
+}
+#pc-price .price-table li{
+    display: flex;
+}
+#pc-price .price-table li:first-of-type{
+    background-color: #FFB18F;
+}
+#pc-price .price-table li:not(:first-of-type){
+    background-color: #FFF8F0;
+}
+#pc-price .price-table li:not(:last-of-type){
+    border-bottom: 3px solid #fff;
+    box-sizing: border-box;
+}
+#pc-price .price-table li > span{
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#pc-price .price-table li:first-of-type > span{
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 500;
+}
+#pc-price .price-table li > span:last-of-type{
+    width: 33.2%;
+}
+#pc-price .price-table li > span:not(:first-of-type){
+    border-left: 3px solid #fff;
+}
+#pc-price .price-table li > span:not(:last-of-type){
+    width: 22%;
+}
+/*
+#pc-price .price-table li:not(:first-of-type) > span{
+    background-color: #FFF8F0;
+}
+*/
